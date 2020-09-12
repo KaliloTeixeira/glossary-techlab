@@ -6,9 +6,8 @@ const Word = mongoose.model('Word');
 module.exports = {
     async listWords(req, res) {
         const { page = 1 } = req.query;
-        const words = await Word.paginate({}, { page, limit: 10 });
+        const words = await Word.find();
         // .json() envia a resposta como Estrutura de Dados (json)
-
         return res.json(words);
     },
 
