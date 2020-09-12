@@ -35,7 +35,7 @@ module.exports = {
     async removeWord(req, res) {
         await Word.findByIdAndRemove(req.params.id);
 
-        return res.send("Word removed sucessfully!");
+        return res.send();
     },
 
     async searchWord(req, res) {
