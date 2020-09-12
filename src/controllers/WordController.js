@@ -20,9 +20,18 @@ module.exports = {
     },
 
     async createWord(req, res) {
-        const word = await Word.create(req.body);
+        const alreadyHave = await Word.findOne({ word: req.body.word });
 
-        return res.json(word);
+        if (alreadyHave)
+            return res.send({
+                error: 'Error',
+                message: 'Word already registered.'
+            });
+
+        else {
+            const word = await Word.create(req.body);
+            return res.json(word);
+        }
     },
 
     async updateWord(req, res) {
@@ -38,7 +47,4 @@ module.exports = {
         return res.send();
     },
 
-    async searchWord(req, res) {
-
-    }
 };
