@@ -22,3 +22,11 @@ I've created that glossary as personal project to improve my knowledges in Web D
   <img src="/layout/img02.PNG" width="500">
   <img src="/layout/img03.PNG" width="500">
 </p>
+
+# Web App - Mobile Visualization
+<p align="center" >
+  <img src="/layout/img04.jpg" width="250">
+  <img src="/layout/img05.jpg" width="250">
+  <img src="/layout/img06.jpg" width="250">
+</p>
+
